@@ -11,6 +11,7 @@ import numpy as np
 import ast
 
 MetaMap_path = "/Users/wu-chensu/Downloads/public_mm_lite/"
+source_file="fda_test_1214.csv"
 
 def create_fda_disease_json_file(): ###create json file for FDA Orphan disease Plug-in
   with open('fda_disease.json', 'a') as outfile:
@@ -307,8 +308,7 @@ def append_df_to_excel(df, excel_path): ###append found record to new xlsx
 
 
 def parse_fda_file():
-    filename="fda_test_1214.csv"
-    df=pd.read_csv(filename)
+    df=pd.read_csv(source_file)
     generic_list=[]
     orphan_list=[]
 
